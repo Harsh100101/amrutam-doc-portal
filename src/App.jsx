@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-
+import LoginModal from "./components/LoginModal";
 import PublicLayout from "./components/PublicLayout";
 import DashboardLayout from "./components/Layout";
 

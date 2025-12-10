@@ -1,15 +1,39 @@
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import "./Layout.css";
+import LoginModal from "./LoginModal";
 
-export default function Layout({ children }) {
+export default function DashboardLayout({ children }) {
+	const [showLogin, setShowLogin] = useState(false);
+	const [showRegister, setShowRegister] = useState(false);
+
+	useEffect(() => {
+		window.openLoginModal = () => setShowLogin(true);
+		window.openRegisterModal = () => {
+			setShowLogin(true);
+			setShowRegister(true);
+		};
+
+		return () => {
+			window.openLoginModal = undefined;
+			window.openRegisterModal = undefined;
+		};
+	}, []);
+
 	return (
-		<div className="public-dashboard-wrapper">
-			<Header />
+		<>
+			<Header openLogin={() => setShowLogin(true)} />
 
-			<main className="public-dashboard-content">{children}</main>
+			<main className="dashboard-content">{children}</main>
 
 			<Footer />
-		</div>
+
+			{showLogin && (
+				<LoginModal
+					onClose={() => setShowLogin(false)}
+					switchToRegister={() => setShowRegister(true)}
+				/>
+			)}
+		</>
 	);
 }

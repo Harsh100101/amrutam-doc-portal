@@ -62,3 +62,65 @@
 	background: #14532d;
 	color: white;
 }
+
+/* Default Desktop Styles */
+.nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 24px;
+}
+
+.nav-links {
+	display: flex;
+	gap: 20px;
+}
+
+.hamburger {
+	display: none;
+	font-size: 24px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+	/* Show hamburger */
+	.hamburger {
+		display: block;
+	}
+
+	/* Hide desktop login button */
+	.login-btn.desktop {
+		display: none;
+	}
+
+	/* Mobile Menu (Hidden by default) */
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 70px;
+		left: 0;
+		width: 100%;
+		background: white;
+		padding: 20px;
+		gap: 16px;
+		border-bottom: 1px solid #ddd;
+	}
+
+	/* Show menu when open */
+	.nav-links.open {
+		display: flex;
+	}
+
+	/* Style mobile login button */
+	.login-btn.mobile {
+		display: block;
+		padding: 10px;
+		margin-top: 10px;
+		width: 100%;
+		text-align: left;
+	}
+}

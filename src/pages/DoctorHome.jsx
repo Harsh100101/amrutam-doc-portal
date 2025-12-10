@@ -132,7 +132,7 @@ const DoctorHome = () => {
 								<div className="doc-hero-image-wrapper">
 									{/* TODO: add real hero image path in src */}
 									<img
-										src="/assets/doctorhome/doctor.png"
+										src="./assets/doctorhome/doctor.png"
 										alt="Amrutam Doctors Illustration"
 										className="doc-hero-image"
 									/>
@@ -150,39 +150,39 @@ const DoctorHome = () => {
 							<div className="doc-featured-logos">
 								{/* TODO: replace with real logo paths */}
 								<img
-									src="/assets/doctorhome/logo1.png"
+									src="./assets/doctorhome/logo1.png"
 									alt="Publication Logo 1"
 								/>
 								<img
-									src="/assets/doctorhome/logo2.png"
+									src="./assets/doctorhome/logo2.png"
 									alt="Publication Logo 2"
 								/>
 								<img
-									src="/assets/doctorhome/logo3.png"
+									src="./assets/doctorhome/logo3.png"
 									alt="Publication Logo 3"
 								/>
 								<img
-									src="/assets/doctorhome/logo4.png"
+									src="./assets/doctorhome/logo4.png"
 									alt="Publication Logo 4"
 								/>
 								<img
-									src="/assets/doctorhome/logo5.png"
+									src="./assets/doctorhome/logo5.png"
 									alt="Publication Logo 5"
 								/>
 								<img
-									src="/assets/doctorhome/logo6.png"
+									src="./assets/doctorhome/logo6.png"
 									alt="Publication Logo 6"
 								/>
 								<img
-									src="/assets/doctorhome/logo7.png"
+									src="./assets/doctorhome/logo7.png"
 									alt="Publication Logo 7"
 								/>
 								<img
-									src="/assets/doctorhome/logo8.png"
+									src="./assets/doctorhome/logo8.png"
 									alt="Publication Logo 8"
 								/>
 								<img
-									src="/assets/doctorhome/logo9.png"
+									src="./assets/doctorhome/logo9.png"
 									alt="Publication Logo 9"
 								/>
 							</div>
@@ -196,7 +196,7 @@ const DoctorHome = () => {
 						<div className="stat-card">
 							{/* optional icon for stat */}
 							<img
-								src="/assets/doctorhome/user.png"
+								src="./assets/doctorhome/user.png"
 								alt=""
 								className="stat-card-icon"
 							/>
@@ -205,7 +205,7 @@ const DoctorHome = () => {
 						</div>
 						<div className="stat-card">
 							<img
-								src="/assets/doctorhome/call.png"
+								src="./assets/doctorhome/call.png"
 								alt=""
 								className="stat-card-icon"
 							/>
@@ -229,7 +229,7 @@ const DoctorHome = () => {
 						<div className="grid-3 doc-why-grid">
 							<article className="card">
 								<img
-									src="/assets/doctorhome/5min.png"
+									src="./assets/doctorhome/5min.png"
 									alt=""
 									className="card-icon"
 								/>
@@ -242,7 +242,7 @@ const DoctorHome = () => {
 
 							<article className="card">
 								<img
-									src="/assets/doctorhome/forum.png"
+									src="./assets/doctorhome/forum.png"
 									alt=""
 									className="card-icon"
 								/>
@@ -255,7 +255,7 @@ const DoctorHome = () => {
 
 							<article className="card">
 								<img
-									src="/assets/doctorhome/wallet.png"
+									src="./assets/doctorhome/wallet.png"
 									alt=""
 									className="card-icon"
 								/>
@@ -278,7 +278,7 @@ const DoctorHome = () => {
 							{/* doctor avatar */}
 							<div className="doc-avatar-wrap">
 								<img
-									src="/assets/doctorhome/prema.png"
+									src="./assets/doctorhome/prema.png"
 									alt="Dr. Prerna Narang"
 									className="doc-avatar"
 								/>
@@ -296,7 +296,7 @@ const DoctorHome = () => {
 
 						<div className="card">
 							<img
-								src="/assets/doctorhome/connect.png"
+								src="./assets/doctorhome/connect.png"
 								alt=""
 								className="card-illustration"
 							/>
@@ -398,7 +398,7 @@ const DoctorHome = () => {
 
 						<div className="card">
 							<img
-								src="/assets/doctorhome/comments.png"
+								src="./assets/doctorhome/comments.png"
 								alt="Comments Illustration"
 								className="card-illustration"
 							/>
@@ -446,7 +446,7 @@ const DoctorHome = () => {
 						<div className="card">
 							<h3>Today</h3>
 							<img
-								src="/assets/doctorhome/dashboard.png"
+								src="./assets/doctorhome/dashboard.png"
 								alt="Dashboard Illustration"
 								className="card-illustration"
 							/>
@@ -480,7 +480,7 @@ const DoctorHome = () => {
 
 						<div className="card">
 							<img
-								src="/assets/doctorhome/prema.png"
+								src="./assets/doctorhome/prema.png"
 								alt="Doctor Profile"
 								className="doc-avatar"
 							/>
@@ -546,7 +546,7 @@ const DoctorHome = () => {
 
 						<div className="doc-steps-right">
 							<img
-								src="/assets/doctorhome/join-our-circle.png"
+								src="./assets/doctorhome/join-our-circle.png"
 								alt="Onboarding Steps Illustration"
 								className="steps-image"
 							/>
@@ -568,7 +568,7 @@ const DoctorHome = () => {
 						<div className="grid-3 doc-why-grid">
 							<article className="card">
 								<img
-									src="/assets/doctorhome/rajesh.png"
+									src="./assets/doctorhome/rajesh.png"
 									alt=""
 									className="card-icon"
 								/>
@@ -579,7 +579,7 @@ const DoctorHome = () => {
 							</article>
 							<article className="card">
 								<img
-									src="/assets/doctorhome/ananya.png"
+									src="./assets/doctorhome/ananya.png"
 									alt=""
 									className="card-icon"
 								/>
@@ -590,7 +590,7 @@ const DoctorHome = () => {
 							</article>
 							<article className="card">
 								<img
-									src="/assets/doctorhome/pooja.png"
+									src="./assets/doctorhome/pooja.png"
 									alt=""
 									className="card-icon"
 								/>

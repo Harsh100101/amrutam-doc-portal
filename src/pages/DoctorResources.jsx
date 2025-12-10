@@ -39,7 +39,7 @@ export default function DoctorResources() {
 							<article key={index} className="resources__card">
 								<div className="resources__thumbnail">
 									<img
-										src="/assets/respage/article.png"
+										src="./assets/respage/article.png"
 										alt={r.title}
 									/>
 								</div>

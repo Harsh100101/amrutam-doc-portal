@@ -1,48 +1,36 @@
+// src/components/LoginModal.jsx
+
 import { useState } from "react";
 import "./LoginModal.css";
 
+import Login from "./Login";
+import Register from "./Register";
+
 export default function LoginModal({ onClose }) {
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
+	const [isLogin, setIsLogin] = useState(true);
 
 	return (
-		<>
-			{/* Overlay */}
-			<div className="modal-overlay" onClick={onClose}></div>
-
-			{/* Popup window */}
-			<div className="modal-box">
+		<div className="modal-overlay" onClick={onClose}>
+			<div
+				className="modal-box"
+				onClick={(e) => e.stopPropagation()} // prevent close on inner click
+			>
 				<button className="modal-close" onClick={onClose}>
 					×
 				</button>
 
-				<h2>Doctor Login</h2>
-				<p className="modal-sub">Access your dashboard</p>
-
-				<div className="modal-form">
-					<label>Email</label>
-					<input
-						type="email"
-						placeholder="doctor@example.com"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
+				{isLogin ? (
+					<Login
+						switchToRegister={() => setIsLogin(false)}
+						onClose={onClose}
 					/>
-
-					<label>Password</label>
-					<input
-						type="password"
-						placeholder="Enter password"
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
+				) : (
+					<Register
+						switchToLogin={() => setIsLogin(true)}
+						onClose={onClose}
 					/>
-
-					<button className="modal-btn">Login</button>
-				</div>
-
-				<p className="modal-footer-text">
-					Don't have an account? <a href="/register">Register here</a>
-				</p>
+				)}
 			</div>
-		</>
+		</div>
 	);
 }

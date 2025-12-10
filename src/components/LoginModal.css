@@ -36,7 +36,8 @@
 	color: #555;
 }
 
-.modal-box h2 {
+/* Titles */
+.modal-title {
 	font-size: 22px;
 	margin-bottom: 6px;
 	color: #1a3c34;
@@ -48,13 +49,19 @@
 	font-size: 14px;
 }
 
-.modal-form label {
+/* Form */
+.modal-content form {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-content label {
 	font-size: 14px;
 	color: #333;
 	margin-top: 10px;
 }
 
-.modal-form input {
+.modal-content input {
 	width: 100%;
 	margin-top: 6px;
 	padding: 10px;
@@ -63,6 +70,7 @@
 	font-size: 14px;
 }
 
+/* Button */
 .modal-btn {
 	margin-top: 18px;
 	width: 100%;
@@ -80,7 +88,7 @@
 	background: #0f3c21;
 }
 
-/* Bottom text */
+/* Footer Text */
 .modal-footer-text {
 	margin-top: 14px;
 	text-align: center;
@@ -88,10 +96,20 @@
 	color: #444;
 }
 
-.modal-footer-text a {
+/* Links inside modal */
+.modal-link {
+	background: none;
+	border: none;
 	color: #14532d;
 	font-weight: 600;
-	text-decoration: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+}
+
+.modal-link:hover {
+	text-decoration: underline;
 }
 
 /* Animations */

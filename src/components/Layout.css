@@ -1,0 +1,18 @@
+.public-dashboard-wrapper {
+    background: #FFF7E2;
+    min-height: 100vh;
+}
+
+.public-dashboard-content {
+    padding: 40px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .public-dashboard-content {
+        padding: 20px 16px;
+    }
+}

@@ -1,0 +1,46 @@
+/* src/pages/DoctorTestimonials.css */
+
+.dt-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 32px 20px;
+	background: #ffeec3;
+}
+
+.dt-header h1 {
+	font-size: 26px;
+	font-weight: 700;
+	color: #1a3c34;
+}
+
+.dt-header p {
+	color: #4b5563;
+	margin-top: 4px;
+}
+
+/* Cards */
+.dt-grid {
+	margin-top: 24px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 18px;
+}
+
+.dt-card {
+	background: rgb(255, 247, 226);
+	border-radius: 18px;
+	padding: 18px 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dt-feedback {
+	font-size: 14px;
+	color: #111827;
+	margin-bottom: 10px;
+}
+
+.dt-author {
+	font-size: 13px;
+	color: #6b7280;
+	font-weight: 500;
+}

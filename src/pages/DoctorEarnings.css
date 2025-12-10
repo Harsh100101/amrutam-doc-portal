@@ -1,0 +1,120 @@
+/* src/pages/DoctorEarnings.css */
+
+.de-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 32px 20px;
+	background: #fff7e2;
+}
+
+.de-header h1 {
+	font-size: 26px;
+	font-weight: 700;
+	color: #1a3c34;
+}
+
+.de-header p {
+	color: #4b5563;
+	margin-top: 4px;
+}
+
+/* Summary cards */
+.de-summary {
+	margin-top: 24px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 18px;
+}
+
+.de-card {
+	background: #ffeec3;
+	border-radius: 18px;
+	padding: 18px 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.de-label {
+	font-size: 14px;
+	color: #6b7280;
+}
+
+.de-value {
+	margin-top: 6px;
+	font-size: 22px;
+	font-weight: 700;
+	color: #111827;
+}
+
+/* Panels */
+.de-grid {
+	margin-top: 30px;
+	display: grid;
+	gap: 24px;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.de-panel {
+	background: #ffeec3;
+	border-radius: 18px;
+	padding: 22px 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.de-panel h2 {
+	font-size: 20px;
+	margin-bottom: 14px;
+	color: #111827;
+}
+
+/* Monthly earnings list */
+.de-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.de-list li {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.de-list li:last-child {
+	border-bottom: none;
+}
+
+.de-list span {
+	color: #6b7280;
+}
+
+.de-list strong {
+	color: #111827;
+}
+
+/* Payout section */
+.de-text {
+	font-size: 14px;
+	color: #4b5563;
+	margin-bottom: 16px;
+}
+
+/* Table */
+.de-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 14px;
+	margin-top: 6px;
+}
+
+.de-table th,
+.de-table td {
+	padding: 8px 6px;
+	text-align: left;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.de-table th {
+	font-weight: 600;
+	color: #374151;
+}

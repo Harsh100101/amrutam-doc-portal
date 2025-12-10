@@ -1,0 +1,90 @@
+.footer {
+	background: #dbdcc4;
+	color: #33643f;
+	padding: 20px 0;
+}
+
+.footer__container {
+	max-width: 1120px;
+	margin: auto;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__brand {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.footer__brand img {
+	width: 100px;
+}
+
+.footer__links a {
+	margin-left: 16px;
+	color: #94a3b8;
+	text-decoration: none;
+}
+.footer {
+	background: #d9dcbc; /* Light muted green background */
+	padding: 60px 0;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.footer-col {
+	flex: 1;
+}
+
+.footer-logo {
+	font-size: 28px;
+	letter-spacing: 8px;
+	color: #1f4b2c; /* Deep green */
+	margin-bottom: 20px;
+}
+
+.footer-title {
+	font-size: 20px;
+	color: #1f4b2c;
+	margin-bottom: 12px;
+	font-weight: 600;
+}
+
+.footer-text {
+	color: #2f2f2f;
+	line-height: 1.6;
+	margin-bottom: 12px;
+	max-width: 260px;
+}
+
+.footer-links {
+	list-style: none;
+	padding: 0;
+	margin-top: 10px;
+}
+
+.footer-links li {
+	color: #2f2f2f;
+	font-size: 16px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.footer-links li:hover {
+	color: #1f4b2c;
+}
+
+.footer-social {
+	display: flex;
+	gap: 10px;
+	margin-top: 15px;
+}

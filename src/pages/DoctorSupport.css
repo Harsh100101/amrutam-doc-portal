@@ -1,0 +1,76 @@
+.ds-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 32px 20px;
+	background: #fff7e2;
+}
+
+.ds-header h1 {
+	font-size: 26px;
+	font-weight: 700;
+	color: #1a3c34;
+}
+
+.ds-header p {
+	color: #4b5563;
+	margin-top: 4px;
+}
+
+/* Cards */
+.ds-grid {
+	margin-top: 24px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 18px;
+}
+
+.ds-card {
+	background: #ffeec3;
+	border-radius: 18px;
+	padding: 18px 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.ds-card h2 {
+	font-size: 18px;
+	margin-bottom: 6px;
+	color: #111827;
+}
+
+.ds-card p {
+	font-size: 14px;
+	color: #4b5563;
+}
+
+.ds-highlight {
+	margin-top: 8px;
+	font-weight: 600;
+	font-size: 14px;
+	color: #0f766e;
+}
+
+/* Extra panel */
+.ds-panel {
+	margin-top: 26px;
+	background: #ffeec3;
+	border-radius: 18px;
+	padding: 18px 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.ds-panel h2 {
+	font-size: 18px;
+	margin-bottom: 8px;
+	color: #111827;
+}
+
+.ds-panel ul {
+	margin: 0;
+	padding-left: 18px;
+	font-size: 14px;
+	color: #4b5563;
+}
+
+.ds-panel li {
+	margin-bottom: 4px;
+}

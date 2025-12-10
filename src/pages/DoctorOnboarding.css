@@ -1,0 +1,70 @@
+.onboarding {
+	padding: 60px 20px;
+	background: #fff7e2;
+}
+
+.onboarding__container {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+.onboarding__header h1 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+.onboarding__header p {
+	color: #4b5563;
+	max-width: 520px;
+}
+
+.onboarding__timeline {
+	margin-top: 30px;
+	border-left: 2px solid #ffeec3;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.onboarding__step {
+	display: flex;
+	gap: 16px;
+}
+
+.onboarding__step-icon img {
+	width: 40px;
+	height: 40px;
+}
+
+.onboarding__step-content h2 {
+	font-size: 1.1rem;
+	margin-bottom: 4px;
+}
+
+.onboarding__step-content p {
+	color: #4b5563;
+	font-size: 0.95rem;
+}
+
+.onboarding__banner {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.onboarding__banner img {
+	max-width: 520px;
+	width: 100%;
+	border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+	.onboarding__timeline {
+		border: none;
+		padding-left: 0;
+	}
+
+	.onboarding__step {
+		align-items: flex-start;
+	}
+}

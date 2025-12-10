@@ -1,0 +1,22 @@
+.doc-hero-nav {
+	display: flex;
+	gap: 12px;
+	margin: 16px 0;
+	flex-wrap: wrap;
+}
+
+.chip-route {
+	border: 1px solid #0f766e;
+	color: #0f766e;
+	background: #fff;
+	padding: 8px 18px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: 0.25s ease;
+}
+
+.chip-route:hover {
+	background: #0f766e;
+	color: #fff;
+}

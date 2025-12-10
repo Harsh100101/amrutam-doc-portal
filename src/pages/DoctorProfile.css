@@ -1,0 +1,125 @@
+.dp-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 32px 20px;
+	background: #fff7e2;
+}
+
+.dp-header h1 {
+	font-size: 26px;
+	font-weight: 700;
+	color: #1a3c34;
+}
+
+.dp-header p {
+	color: #4b5563;
+	margin-top: 4px;
+}
+
+/* Grid layout */
+.dp-grid {
+	margin-top: 24px;
+	display: grid;
+	gap: 24px;
+	grid-template-columns: minmax(260px, 1fr) minmax(320px, 1.2fr);
+}
+
+@media (max-width: 768px) {
+	.dp-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Summary card */
+.dp-card {
+	background: #ffeec3;
+	border-radius: 18px;
+	padding: 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dp-card h2 {
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #111827;
+}
+
+.dp-name {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: #1a3c34;
+}
+
+.dp-line {
+	font-size: 14px;
+	color: #4b5563;
+	margin-bottom: 6px;
+}
+
+.dp-line span {
+	font-weight: 600;
+	color: #111827;
+}
+
+/* Form */
+.dp-form {
+	background: #ffeec3;
+	border-radius: 18px;
+	padding: 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.dp-form h2 {
+	font-size: 18px;
+	color: #111827;
+	margin-bottom: 4px;
+}
+
+.dp-form label {
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+	color: #374151;
+	gap: 4px;
+}
+
+.dp-form input,
+.dp-form textarea {
+	border-radius: 10px;
+	border: 1px solid #d1d5db;
+	padding: 8px 10px;
+	font-size: 14px;
+	outline: none;
+}
+
+.dp-form textarea {
+	min-height: 80px;
+	resize: vertical;
+}
+
+.dp-form input:focus,
+.dp-form textarea:focus {
+	border-color: #10b981;
+	box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.3);
+}
+
+.dp-btn {
+	margin-top: 8px;
+	align-self: flex-start;
+	background: #14532d;
+	color: white;
+	border: none;
+	border-radius: 999px;
+	padding: 8px 18px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.dp-btn:hover {
+	background: #0f3c21;
+}

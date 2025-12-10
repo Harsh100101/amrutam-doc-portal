@@ -2,6 +2,7 @@ import "./DoctorHome.css";
 import { useRef, useState, useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
 import SEO from "../components/SEO.jsx";
+import BackToTop from "../components/BackToTop";
 
 const DoctorHome = () => {
 	// Scroll references
@@ -11,6 +12,9 @@ const DoctorHome = () => {
 	const testimonialRef = useRef(null);
 
 	const [activeNav, setActiveNav] = useState("about");
+	const scrollTo = (ref) => {
+		ref.current?.scrollIntoView({ behavior: "smooth" });
+	};
 
 	useEffect(() => {
 		const sections = [
@@ -221,7 +225,7 @@ const DoctorHome = () => {
 				</section>
 
 				{/* WHY DOCTORS CHOOSE US */}
-				<section className="section" ref={aboutRef}>
+				<section className="section" ref={aboutRef} id="about">
 					<div className="container">
 						<h2 className="section-title">
 							Why Doctors Choose Us?
@@ -516,7 +520,11 @@ const DoctorHome = () => {
 				</section>
 
 				{/* ONBOARDING STEPS SECTION */}
-				<section className="section doc-steps" ref={onboardingRef}>
+				<section
+					className="section doc-steps"
+					ref={onboardingRef}
+					id="onboarding"
+				>
 					<h2 className="section-title">Join Our Circle of Care</h2>
 					<p className="page-subtitle">
 						Becoming a part of Amrutam is simple.
@@ -563,6 +571,7 @@ const DoctorHome = () => {
 				<section
 					className="section doc-testimonials"
 					ref={testimonialRef}
+					id="testimonials"
 				>
 					<div className="container">
 						<h2 className="section-title">
@@ -609,7 +618,7 @@ const DoctorHome = () => {
 				</section>
 
 				{/* FAQ */}
-				<section className="section doc-faq" ref={faqRef}>
+				<section className="section doc-faq" ref={faqRef} id="faq">
 					<div className="container">
 						<h2 className="section-title">
 							Frequently Asked Questions
@@ -696,6 +705,7 @@ const DoctorHome = () => {
 					</div>
 				</section>
 			</div>
+			<BackToTop />
 		</>
 	);
 };

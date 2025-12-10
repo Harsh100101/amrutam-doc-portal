@@ -1,4 +1,3 @@
-// src/components/LoginModal.jsx
 
 import { useState } from "react";
 import "./LoginModal.css";

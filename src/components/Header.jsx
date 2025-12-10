@@ -38,10 +38,7 @@ export default function Header({ openLogin }) {
 					</button>
 				</nav>
 
-				{/* Desktop Login Button */}
-				<button className="login-btn desktop" onClick={openLogin}>
-					Login
-				</button>
+				
 			</div>
 		</header>
 	);

@@ -38,12 +38,14 @@ const DoctorHome = () => {
 			}
 		});
 
-		return () => observer.disconnect();
-	}, []);
+		const handler = () => {};
+		document.addEventListener("open-login", handler);
 
-	const scrollTo = (ref) => {
-		ref.current?.scrollIntoView({ behavior: "smooth" });
-	};
+		return () => {
+			document.removeEventListener("open-login", handler);
+			observer.disconnect();
+		};
+	}, []);
 
 	return (
 		<>
@@ -120,7 +122,10 @@ const DoctorHome = () => {
 								</p>
 
 								<div className="hero-actions">
-									<button className="btn btn-primary">
+									<button
+										className="btn btn-primary"
+										onClick={() => window.openLoginModal()}
+									>
 										Join Now
 									</button>
 								</div>

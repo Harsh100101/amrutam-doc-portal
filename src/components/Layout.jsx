@@ -5,13 +5,16 @@ import LoginModal from "./LoginModal";
 
 export default function DashboardLayout({ children }) {
 	const [showLogin, setShowLogin] = useState(false);
-	const [showRegister, setShowRegister] = useState(false);
+	const [modalView, setModalView] = useState("login");
 
 	useEffect(() => {
-		window.openLoginModal = () => setShowLogin(true);
-		window.openRegisterModal = () => {
+		window.openLoginModal = () => {
+			setModalView("login");
 			setShowLogin(true);
-			setShowRegister(true);
+		};
+		window.openRegisterModal = () => {
+			setModalView("register");
+			setShowLogin(true);
 		};
 
 		return () => {
@@ -24,14 +27,14 @@ export default function DashboardLayout({ children }) {
 		<>
 			<Header openLogin={() => setShowLogin(true)} />
 
-			<main className="dashboard-content">{children}</main>
+			<main className="dashboard-content page-shell">{children}</main>
 
 			<Footer />
 
 			{showLogin && (
 				<LoginModal
 					onClose={() => setShowLogin(false)}
-					switchToRegister={() => setShowRegister(true)}
+					defaultView={modalView}
 				/>
 			)}
 		</>

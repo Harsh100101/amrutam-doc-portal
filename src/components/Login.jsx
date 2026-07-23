@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function Login({ switchToRegister, onClose }) {
+export default function Login({ onSwitchToRegister, onClose }) {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -15,10 +15,12 @@ export default function Login({ switchToRegister, onClose }) {
 	return (
 		<div className="modal-content">
 			<h2 className="modal-title">Login to Continue</h2>
+			<p className="modal-sub">Access your doctor dashboard and tools.</p>
 
 			<form onSubmit={handleLogin}>
-				<label>Email</label>
+				<label htmlFor="login-email">Email</label>
 				<input
+					id="login-email"
 					type="email"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
@@ -26,8 +28,9 @@ export default function Login({ switchToRegister, onClose }) {
 					placeholder="Enter your email"
 				/>
 
-				<label>Password</label>
+				<label htmlFor="login-password">Password</label>
 				<input
+					id="login-password"
 					type="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
@@ -42,7 +45,11 @@ export default function Login({ switchToRegister, onClose }) {
 
 			<p className="modal-footer-text">
 				Don't have an account?{" "}
-				<button className="modal-link" onClick={switchToRegister}>
+				<button
+					type="button"
+					className="modal-link"
+					onClick={onSwitchToRegister}
+				>
 					Register Now
 				</button>
 			</p>

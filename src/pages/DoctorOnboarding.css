@@ -1,6 +1,6 @@
 .onboarding {
 	padding: 60px 20px;
-	background: #fff7e2;
+	background: transparent;
 }
 
 .onboarding__container {
@@ -14,13 +14,13 @@
 }
 
 .onboarding__header p {
-	color: #4b5563;
+	color: var(--text-muted);
 	max-width: 520px;
 }
 
 .onboarding__timeline {
 	margin-top: 30px;
-	border-left: 2px solid #ffeec3;
+	border-left: 2px solid var(--border);
 	padding-left: 20px;
 	display: flex;
 	flex-direction: column;
@@ -43,7 +43,7 @@
 }
 
 .onboarding__step-content p {
-	color: #4b5563;
+	color: var(--text-muted);
 	font-size: 0.95rem;
 }
 

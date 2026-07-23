@@ -1,19 +1,29 @@
 .public-dashboard-wrapper {
-	background: #fff7e2;
+	background: transparent;
 	min-height: 100vh;
 }
 
 .public-dashboard-content {
 	width: 100%;
 	padding: 40px 24px;
-	max-width: 0;
-	margin: 0;
+	margin: 0 auto;
+	max-width: var(--container);
 	box-sizing: border-box;
+}
+
+.dashboard-content {
+	width: 100%;
+	padding: 32px 0 56px;
+	background: transparent;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
 	.public-dashboard-content {
 		padding: 20px 16px;
+	}
+
+	.dashboard-content {
+		padding: 24px 0 40px;
 	}
 }

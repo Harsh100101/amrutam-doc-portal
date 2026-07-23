@@ -4,18 +4,30 @@ import "./Header.css";
 
 export default function Header({ openLogin }) {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const closeMenu = () => setMenuOpen(false);
+	const handleLogin = () => {
+		openLogin?.();
+		closeMenu();
+	};
 
 	return (
 		<header className="nav-header">
-			<div className="nav-container">
-				<div className="nav-logo">AMRUTAM</div>
+			<div className="nav-container container">
+				<NavLink to="/" className="nav-logo" onClick={closeMenu}>
+					<span className="nav-logo-mark">A</span>
+					<span>AMRUTAM</span>
+				</NavLink>
 
 				{/* Hamburger Button */}
 				<button
 					className="hamburger"
-					onClick={() => setMenuOpen(!menuOpen)}
+					onClick={() => setMenuOpen((prev) => !prev)}
+					aria-expanded={menuOpen}
+					aria-label="Toggle navigation"
 				>
-					☰
+					<span />
+					<span />
+					<span />
 				</button>
 
 				{/* Navigation Links */}
@@ -28,17 +40,15 @@ export default function Header({ openLogin }) {
 					<NavLink to="/faq">FAQ</NavLink>
 					<NavLink to="/resources">Resources</NavLink>
 					<NavLink to="/dashboard">Dashboard</NavLink>
-					<NavLink to="/profile">Profile</NavLink>
-					<NavLink to="/earnings">Earnings</NavLink>
-					<NavLink to="/support">Support</NavLink>
-					<NavLink to="/testimonials">Testimonials</NavLink>
 
-					<button className="login-btn mobile" onClick={openLogin}>
+					<button className="login-btn mobile" onClick={handleLogin}>
 						Login
 					</button>
 				</nav>
 
-				
+				<button className="login-btn desktop" onClick={handleLogin}>
+					Login
+				</button>
 			</div>
 		</header>
 	);

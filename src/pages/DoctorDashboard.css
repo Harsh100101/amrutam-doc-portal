@@ -1,19 +1,25 @@
 /* Wrapper */
 .dd-wrapper {
 	margin: 0 auto;
-	padding: 32px 120px;
-	background: #fff7e2;
+	width: min(1150px, calc(100% - 32px));
+	padding: 28px 0 0;
+	background: transparent;
 }
 
 /* Header */
+.dd-header {
+	margin-bottom: 8px;
+}
+
 .dd-header h1 {
 	font-size: 28px;
 	font-weight: 700;
-	color: #1a3c34;
+	color: var(--text);
+	letter-spacing: -0.02em;
 }
 
 .dd-header p {
-	color: #4b5563;
+	color: var(--text-muted);
 	margin-top: 4px;
 	font-size: 16px;
 }
@@ -27,106 +33,135 @@
 }
 
 .dd-stat-card {
-	background: #ffeec3;
+	background: var(--surface);
 	padding: 20px;
-	border-radius: 18px;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+	border-radius: 20px;
+	box-shadow: var(--shadow-sm);
+	border: 1px solid var(--border);
+	transition:
+		transform 160ms ease,
+		box-shadow 160ms ease,
+		border-color 160ms ease;
+}
+
+.dd-stat-card:hover,
+.dd-panel:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-md);
+	border-color: var(--border-strong);
 }
 
 .dd-stat-label {
 	font-size: 14px;
-	color: #6b7280;
+	color: var(--text-muted);
 }
 
 .dd-stat-value {
 	margin-top: 8px;
 	font-size: 26px;
 	font-weight: 700;
-	color: #1f2937;
+	color: var(--text);
 }
 
 /* GRID PANELS */
 .dd-grid {
 	margin-top: 32px;
 	display: grid;
-	gap: 24px;
+	gap: 28px;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .dd-panel {
-	background: #ffeec3;
+	background: var(--surface);
 	padding: 24px;
-	border-radius: 18px;
-	box-shadow: 0 8px 20px rgb(255, 247, 226);
+	border-radius: 20px;
+	box-shadow: var(--shadow-sm);
+	border: 1px solid var(--border);
+	transition:
+		transform 160ms ease,
+		box-shadow 160ms ease,
+		border-color 160ms ease;
 }
 
 .dd-panel h2 {
 	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 16px;
-	color: #1f2937;
+	color: var(--text);
 }
 
 /* Appointments List */
-.dd-appointment-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.dd-appointment-list li {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 14px 0;
-	border-bottom: 1px solid #e5e7eb;
-}
-
-.dd-appointment-list li:last-child {
-	border-bottom: none;
-}
-
-.dd-app-info span {
-	font-size: 12px;
-	color: #6b7280;
-}
-
-.dd-app-time {
-	font-weight: 600;
-	font-size: 14px;
-	color: #10b981;
-}
-
-.dd-empty {
-	color: #6b7280;
-	font-size: 14px;
-	padding: 12px 0;
-}
-
-/* Earnings List */
+.dd-appointment-list,
 .dd-earn-list {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
+.dd-appointment-list li,
 .dd-earn-list li {
 	display: flex;
 	justify-content: space-between;
-	padding: 10px 0;
-	border-bottom: 1px solid #e5e7eb;
+	gap: 12px;
+	padding: 14px 0;
+	border-bottom: 1px solid var(--border);
+	align-items: center;
 }
 
+.dd-appointment-list li:last-child,
 .dd-earn-list li:last-child {
 	border-bottom: none;
 }
 
+.dd-app-info {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.dd-app-info span,
 .dd-earn-list span {
+	font-size: 12px;
+	color: var(--text-muted);
+}
+
+.dd-app-time {
+	font-weight: 600;
 	font-size: 14px;
-	color: #6b7280;
+	color: var(--success);
+	white-space: nowrap;
+}
+
+.dd-empty {
+	color: var(--text-muted);
+	font-size: 14px;
+	padding: 12px 0;
 }
 
 .dd-earn-list strong {
 	font-size: 16px;
-	color: #1f2937;
+	color: var(--text);
+	white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+	.dd-wrapper {
+		width: min(1150px, calc(100% - 24px));
+		padding-top: 20px;
+	}
+
+	.dd-grid {
+		gap: 20px;
+	}
+
+	.dd-panel,
+	.dd-stat-card {
+		padding: 20px;
+	}
+
+	.dd-appointment-list li,
+	.dd-earn-list li {
+		align-items: flex-start;
+		flex-direction: column;
+	}
 }

@@ -1,126 +1,168 @@
 .nav-header {
 	width: 100%;
-	background: #fff7e2;
-	border-bottom: 1px solid #e5e7eb;
-	padding: 12px 0;
+	background: rgba(247, 248, 243, 0.88);
+	backdrop-filter: blur(16px);
+	border-bottom: 1px solid var(--border);
+	padding: 14px 0;
 	position: sticky;
 	top: 0;
 	z-index: 999;
 }
 
 .nav-container {
-	max-width: 1200px;
-	margin: 0 auto;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	padding: 0 24px;
+	justify-content: space-between;
+	gap: 20px;
 }
 
 .nav-logo {
-	font-size: 26px;
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 18px;
 	font-weight: 700;
-	letter-spacing: 6px;
-	color: #1f3f2f;
+	letter-spacing: 0.24em;
+	color: var(--text);
+	flex-shrink: 0;
+}
+
+.nav-logo-mark {
+	display: inline-grid;
+	place-items: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 12px;
+	background: linear-gradient(135deg, var(--primary), var(--secondary));
+	color: #fff;
+	letter-spacing: 0;
+	box-shadow: var(--shadow-sm);
 }
 
 .nav-links {
 	display: flex;
-	gap: 24px;
+	gap: 8px;
 	align-items: center;
+	padding: 6px;
+	border: 1px solid var(--border);
+	background: rgba(255, 255, 255, 0.72);
+	border-radius: 999px;
+	box-shadow: var(--shadow-sm);
 }
 
 .nav-links a {
-	color: #14532d;
-	text-decoration: none;
-	font-size: 15px;
-	padding: 6px 14px;
-	border-radius: 20px;
-	transition: 0.2s ease-in-out;
+	color: var(--text-muted);
+	font-size: 14px;
+	font-weight: 500;
+	padding: 9px 14px;
+	border-radius: 999px;
+	transition:
+		background var(--transition),
+		color var(--transition),
+		transform var(--transition);
+	white-space: nowrap;
 }
 
 .nav-links a:hover {
-	background: #e6f4ea;
+	background: var(--surface-soft);
+	color: var(--text);
 }
 
 .nav-links a.active {
-	background: #14532d;
-	color: white;
+	background: var(--primary);
+	color: #fff;
+	box-shadow: 0 8px 18px rgba(31, 91, 67, 0.18);
 }
 
 .login-btn {
-	border: 1px solid #14532d;
-	background: transparent;
-	padding: 6px 18px;
-	border-radius: 20px;
-	font-size: 15px;
+	border: 1px solid var(--primary);
+	background: var(--primary);
+	color: #fff;
+	padding: 11px 18px;
+	border-radius: 999px;
+	font-size: 14px;
+	font-weight: 600;
 	cursor: pointer;
-	transition: 0.2s;
+	transition:
+		transform var(--transition),
+		background var(--transition),
+		box-shadow var(--transition);
+	box-shadow: var(--shadow-sm);
 }
 
 .login-btn:hover {
-	background: #14532d;
-	color: white;
+	background: var(--primary-hover);
+	transform: translateY(-1px);
+	box-shadow: var(--shadow-md);
 }
 
-/* Default Desktop Styles */
-.nav-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 16px 24px;
-}
-
-.nav-links {
-	display: flex;
-	gap: 20px;
+.desktop {
+	display: inline-flex;
 }
 
 .hamburger {
 	display: none;
-	font-size: 24px;
-	background: none;
-	border: none;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	border-radius: 14px;
+	background: var(--surface);
+	border: 1px solid var(--border);
 	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.hamburger span {
+	display: block;
+	width: 18px;
+	height: 2px;
+	border-radius: 999px;
+	background: var(--text);
 }
 
 /* MOBILE STYLES */
 @media (max-width: 768px) {
-	/* Show hamburger */
-	.hamburger {
-		display: block;
+	.nav-container {
+		position: relative;
 	}
 
-	/* Hide desktop login button */
-	.login-btn.desktop {
+	.hamburger {
+		display: inline-flex;
+		z-index: 2;
+	}
+
+	.desktop {
 		display: none;
 	}
 
-	/* Mobile Menu (Hidden by default) */
 	.nav-links {
 		display: none;
 		flex-direction: column;
 		position: absolute;
-		top: 70px;
-		left: 0;
-		width: 100%;
-		background: white;
-		padding: 20px;
-		gap: 16px;
-		border-bottom: 1px solid #ddd;
+		top: calc(100% + 12px);
+		left: 16px;
+		right: 16px;
+		padding: 14px;
+		gap: 8px;
+		border-radius: 24px;
+		background: rgba(255, 255, 255, 0.96);
+		box-shadow: var(--shadow-md);
+		align-items: stretch;
+		border: 1px solid var(--border);
 	}
 
-	/* Show menu when open */
 	.nav-links.open {
 		display: flex;
 	}
 
-	/* Style mobile login button */
 	.login-btn.mobile {
-		display: block;
-		padding: 10px;
-		margin-top: 10px;
+		display: inline-flex;
+		justify-content: center;
+		margin-top: 8px;
 		width: 100%;
-		text-align: left;
+		padding: 12px 16px;
 	}
 }

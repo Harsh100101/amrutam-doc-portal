@@ -6,11 +6,12 @@ export default function BackToTop() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY > 200) setShow(true);
-			else setShow(false);
+			setShow(window.scrollY > 240);
 		};
 
-		window.addEventListener("scroll", handleScroll);
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		handleScroll();
+
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
@@ -20,7 +21,11 @@ export default function BackToTop() {
 
 	return (
 		show && (
-			<button className="back-to-top-btn" onClick={scrollToTop}>
+			<button
+				className="back-to-top-btn"
+				onClick={scrollToTop}
+				aria-label="Back to top"
+			>
 				↑
 			</button>
 		)

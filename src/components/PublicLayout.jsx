@@ -6,13 +6,16 @@ import LoginModal from "./LoginModal";
 
 export default function PublicLayout({ children }) {
 	const [showLogin, setShowLogin] = useState(false);
-	const [showRegister, setShowRegister] = useState(false);
+	const [modalMode, setModalMode] = useState("login");
 
 	useEffect(() => {
-		window.openLoginModal = () => setShowLogin(true);
-		window.openRegisterModal = () => {
+		window.openLoginModal = () => {
+			setModalMode("login");
 			setShowLogin(true);
-			setShowRegister(true);
+		};
+		window.openRegisterModal = () => {
+			setModalMode("register");
+			setShowLogin(true);
 		};
 
 		return () => {
@@ -32,7 +35,7 @@ export default function PublicLayout({ children }) {
 			{showLogin && (
 				<LoginModal
 					onClose={() => setShowLogin(false)}
-					switchToRegister={() => setShowRegister(true)}
+					initialMode={modalMode}
 				/>
 			)}
 		</>

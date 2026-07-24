@@ -1,6 +1,5 @@
 import "./DoctorHome.css";
 import { useRef, useState, useEffect } from "react";
-import { SocialIcon } from "react-social-icons";
 import SEO from "../components/SEO.jsx";
 import BackToTop from "../components/BackToTop";
 
@@ -58,8 +57,6 @@ const DoctorHome = () => {
 				description="Join Amrutam as an Ayurvedic doctor, grow your practice, manage patients, and earn with flexible schedules."
 			/>
 			<div className="doctor-home-page">
-				{/* all your sections */}
-				{/* HERO + TOP NAV */}
 				<section className="doc-hero">
 					<div className="container">
 						<div className="doc-hero-top">
@@ -70,7 +67,6 @@ const DoctorHome = () => {
 						</div>
 
 						<nav className="doc-hero-nav">
-							{/* Scroll Navigation Chips */}
 							<button
 								className={`chip ${
 									activeNav === "about" ? "chip-active" : ""
@@ -113,7 +109,6 @@ const DoctorHome = () => {
 						</nav>
 
 						<div className="doc-hero-grid">
-							{/* LEFT: TEXT */}
 							<div className="doc-hero-left">
 								<p className="doc-hero-greet">
 									Namaste, Welcome to Amrutam
@@ -132,14 +127,17 @@ const DoctorHome = () => {
 									>
 										Join Now
 									</button>
+									<button
+										className="btn btn-outline"
+										onClick={() => scrollTo(onboardingRef)}
+									>
+										View Steps
+									</button>
 								</div>
 							</div>
 
-							{/* RIGHT: HERO IMAGE + FEATURED LOGOS */}
 							<div className="doc-hero-right">
-								{/* Main hero illustration (doctors group) */}
 								<div className="doc-hero-image-wrapper">
-									{/* TODO: add real hero image path in src */}
 									<img
 										src="./assets/doctorhome/doctor.png"
 										alt="Amrutam Doctors Illustration"
@@ -148,7 +146,6 @@ const DoctorHome = () => {
 								</div>
 							</div>
 						</div>
-						{/* Featured card */}
 						<div className="card doc-hero-featured">
 							<p className="feature">Featured</p>
 							<h3 className="muted">
@@ -157,7 +154,6 @@ const DoctorHome = () => {
 							</h3>
 
 							<div className="doc-featured-logos">
-								{/* TODO: replace with real logo paths */}
 								<img
 									src="./assets/doctorhome/logo1.png"
 									alt="Publication Logo 1"

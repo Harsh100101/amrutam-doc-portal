@@ -31,7 +31,7 @@ const DoctorHome = () => {
 					}
 				});
 			},
-			{ threshold: 0.4 }
+			{ threshold: 0.4 },
 		);
 
 		sections.forEach((section) => {
@@ -41,11 +41,7 @@ const DoctorHome = () => {
 			}
 		});
 
-		const handler = () => {};
-		document.addEventListener("open-login", handler);
-
 		return () => {
-			document.removeEventListener("open-login", handler);
 			observer.disconnect();
 		};
 	}, []);
@@ -61,16 +57,13 @@ const DoctorHome = () => {
 					<div className="container">
 						<div className="doc-hero-top">
 							<p className="doc-hero-tag">
-								Register Yourself As An{" "}
-								<span>Amrutam Doctor</span>
+								Register Yourself As An <span>Amrutam Doctor</span>
 							</p>
 						</div>
 
 						<nav className="doc-hero-nav">
 							<button
-								className={`chip ${
-									activeNav === "about" ? "chip-active" : ""
-								}`}
+								className={`chip ${activeNav === "about" ? "chip-active" : ""}`}
 								onClick={() => scrollTo(aboutRef)}
 							>
 								About Us
@@ -78,9 +71,7 @@ const DoctorHome = () => {
 
 							<button
 								className={`chip ${
-									activeNav === "onboarding"
-										? "chip-active"
-										: ""
+									activeNav === "onboarding" ? "chip-active" : ""
 								}`}
 								onClick={() => scrollTo(onboardingRef)}
 							>
@@ -88,9 +79,7 @@ const DoctorHome = () => {
 							</button>
 
 							<button
-								className={`chip ${
-									activeNav === "faq" ? "chip-active" : ""
-								}`}
+								className={`chip ${activeNav === "faq" ? "chip-active" : ""}`}
 								onClick={() => scrollTo(faqRef)}
 							>
 								FAQ
@@ -98,9 +87,7 @@ const DoctorHome = () => {
 
 							<button
 								className={`chip ${
-									activeNav === "testimonials"
-										? "chip-active"
-										: ""
+									activeNav === "testimonials" ? "chip-active" : ""
 								}`}
 								onClick={() => scrollTo(testimonialRef)}
 							>
@@ -110,14 +97,11 @@ const DoctorHome = () => {
 
 						<div className="doc-hero-grid">
 							<div className="doc-hero-left">
-								<p className="doc-hero-greet">
-									Namaste, Welcome to Amrutam
-								</p>
+								<p className="doc-hero-greet">Namaste, Welcome to Amrutam</p>
 								<h1>Join Amrutam – Grow Your Practice</h1>
 								<p className="doc-hero-sub">
-									Connect with more patients, set your own
-									schedule, and grow your Ayurvedic practice
-									effortlessly.
+									Connect with more patients, set your own schedule, and grow
+									your Ayurvedic practice effortlessly.
 								</p>
 
 								<div className="hero-actions">
@@ -149,8 +133,7 @@ const DoctorHome = () => {
 						<div className="card doc-hero-featured">
 							<p className="feature">Featured</p>
 							<h3 className="muted">
-								Recognized and celebrated by leading
-								publications
+								Recognized and celebrated by leading publications
 							</h3>
 
 							<div className="doc-featured-logos">
@@ -223,12 +206,10 @@ const DoctorHome = () => {
 				{/* WHY DOCTORS CHOOSE US */}
 				<section className="section" ref={aboutRef} id="about">
 					<div className="container">
-						<h2 className="section-title">
-							Why Doctors Choose Us?
-						</h2>
+						<h2 className="section-title">Why Doctors Choose Us?</h2>
 						<p className="page-subtitle">
-							Unlock the benefits of smarter healthcare management
-							and patient care.
+							Unlock the benefits of smarter healthcare management and patient
+							care.
 						</p>
 
 						<div className="grid-3 doc-why-grid">
@@ -239,10 +220,7 @@ const DoctorHome = () => {
 									className="card-icon"
 								/>
 								<h3>Instant FREE 5-Min Call</h3>
-								<p>
-									Build trust with patients through a free
-									5-minute call.
-								</p>
+								<p>Build trust with patients through a free 5-minute call.</p>
 							</article>
 
 							<article className="card">
@@ -253,8 +231,8 @@ const DoctorHome = () => {
 								/>
 								<h3>Forum & Thought Sharing</h3>
 								<p>
-									Engage with patients, share Ayurvedic
-									wisdom, answer questions.
+									Engage with patients, share Ayurvedic wisdom, answer
+									questions.
 								</p>
 							</article>
 
@@ -266,8 +244,8 @@ const DoctorHome = () => {
 								/>
 								<h3>Flexible Practice & Smart Wallet</h3>
 								<p>
-									Choose your schedule, manage consultations,
-									and withdraw earnings.
+									Choose your schedule, manage consultations, and withdraw
+									earnings.
 								</p>
 							</article>
 						</div>
@@ -294,8 +272,8 @@ const DoctorHome = () => {
 								Gynecology + 2 others · 7 years of Experience
 							</p>
 							<p>
-								We understand the importance of building trust.
-								A free 5-min call helps connect instantly.
+								We understand the importance of building trust. A free 5-min
+								call helps connect instantly.
 							</p>
 						</div>
 
@@ -319,9 +297,7 @@ const DoctorHome = () => {
 					<div className="container two-column">
 						<div className="card">
 							<div className="doc-tabs">
-								<button className="chip chip-active">
-									Questions
-								</button>
+								<button className="chip chip-active">Questions</button>
 								<button className="chip">Thoughts</button>
 							</div>
 
@@ -331,8 +307,8 @@ const DoctorHome = () => {
 							</div>
 
 							<h3>
-								Question: Can Ayurveda help with stress and
-								mental health issues?
+								Question: Can Ayurveda help with stress and mental health
+								issues?
 							</h3>
 							<p className="muted small">
 								Explores Ayurvedic practices in managing stress.
@@ -343,8 +319,7 @@ const DoctorHome = () => {
 							</button>
 
 							<p className="doc-forum-footer muted">
-								Engage with patients, answer questions, share
-								wisdom.
+								Engage with patients, answer questions, share wisdom.
 							</p>
 						</div>
 
@@ -352,8 +327,7 @@ const DoctorHome = () => {
 							<h4>Thought: Ayurveda & Mental Health</h4>
 							<p className="muted">Dr. Marium Roy · 5 days ago</p>
 							<p className="small">
-								Ayurveda emphasizes balance of mind, body and
-								spirit.
+								Ayurveda emphasizes balance of mind, body and spirit.
 							</p>
 
 							{/* Stats Row */}
@@ -373,9 +347,7 @@ const DoctorHome = () => {
 							<h2>Select your mode of session</h2>
 
 							<div className="doc-mode-tabs">
-								<button className="chip chip-active">
-									Free Call
-								</button>
+								<button className="chip chip-active">Free Call</button>
 								<button className="chip">Video</button>
 								<button className="chip">Chat</button>
 							</div>
@@ -396,8 +368,7 @@ const DoctorHome = () => {
 							</div>
 
 							<p className="small muted">
-								Choose Instant Chat, Instant Call, or Schedule
-								Video call.
+								Choose Instant Chat, Instant Call, or Schedule Video call.
 							</p>
 						</div>
 
@@ -432,8 +403,7 @@ const DoctorHome = () => {
 							</div>
 
 							<p className="small">
-								Withdraw payments safely — OTP is sent for
-								verification.
+								Withdraw payments safely — OTP is sent for verification.
 							</p>
 
 							<div className="doc-withdrawal-row">
@@ -455,13 +425,8 @@ const DoctorHome = () => {
 								alt="Dashboard Illustration"
 								className="card-illustration"
 							/>
-							<p>
-								Offline / Online Appointments, Revenue,
-								Feedback.
-							</p>
-							<p className="small muted">
-								Track your day at a glance.
-							</p>
+							<p>Offline / Online Appointments, Revenue, Feedback.</p>
+							<p className="small muted">Track your day at a glance.</p>
 						</div>
 					</div>
 				</section>
@@ -471,12 +436,9 @@ const DoctorHome = () => {
 					<div className="container two-column">
 						<div className="card">
 							<h3>Flexible Work Timing</h3>
-							<p className="muted">
-								Average Ratings · Total Ratings
-							</p>
+							<p className="muted">Average Ratings · Total Ratings</p>
 							<p>
-								<strong>4.8</strong> (218) ·{" "}
-								<strong>4.5</strong> Feedback
+								<strong>4.8</strong> (218) · <strong>4.5</strong> Feedback
 							</p>
 							<p className="small">
 								Control when patients can book consultations.
@@ -490,12 +452,8 @@ const DoctorHome = () => {
 								className="doc-avatar"
 							/>
 							<h3>Dr. Prerna Narang</h3>
-							<p className="muted">
-								Male-Female Infertility · 7 years
-							</p>
-							<p className="small">
-								Speaks: English, Hindi, Marathi
-							</p>
+							<p className="muted">Male-Female Infertility · 7 years</p>
+							<p className="small">Speaks: English, Hindi, Marathi</p>
 
 							<div className="doc-consult-options">
 								<div>
@@ -522,9 +480,7 @@ const DoctorHome = () => {
 					id="onboarding"
 				>
 					<h2 className="section-title">Join Our Circle of Care</h2>
-					<p className="page-subtitle">
-						Becoming a part of Amrutam is simple.
-					</p>
+					<p className="page-subtitle">Becoming a part of Amrutam is simple.</p>
 					<div className="container doc-steps-container">
 						<div className="doc-steps-left">
 							<div className="doc-steps-vertical">
@@ -570,9 +526,7 @@ const DoctorHome = () => {
 					id="testimonials"
 				>
 					<div className="container">
-						<h2 className="section-title">
-							What Doctors Are Saying
-						</h2>
+						<h2 className="section-title">What Doctors Are Saying</h2>
 						<p className="page-subtitle">Trusted by experts.</p>
 
 						<div className="grid-3 doc-why-grid">
@@ -583,9 +537,7 @@ const DoctorHome = () => {
 									className="card-icon"
 								/>
 								<h3>Dr. Rajesh Iyer</h3>
-								<p className="small">
-									Authentic herbal formulations…
-								</p>
+								<p className="small">Authentic herbal formulations…</p>
 							</article>
 							<article className="card">
 								<img
@@ -594,9 +546,7 @@ const DoctorHome = () => {
 									className="card-icon"
 								/>
 								<h3>Dr. Ananya Sharma</h3>
-								<p className="small">
-									Bridges Ayurveda & modern wellness…
-								</p>
+								<p className="small">Bridges Ayurveda & modern wellness…</p>
 							</article>
 							<article className="card">
 								<img
@@ -605,9 +555,7 @@ const DoctorHome = () => {
 									className="card-icon"
 								/>
 								<h3>Dr. Pooja Deshmukh</h3>
-								<p className="small">
-									Patients show positive results…
-								</p>
+								<p className="small">Patients show positive results…</p>
 							</article>
 						</div>
 					</div>
@@ -616,40 +564,28 @@ const DoctorHome = () => {
 				{/* FAQ */}
 				<section className="section doc-faq" ref={faqRef} id="faq">
 					<div className="container">
-						<h2 className="section-title">
-							Frequently Asked Questions
-						</h2>
+						<h2 className="section-title">Frequently Asked Questions</h2>
 						<p className="page-subtitle">Find quick answers.</p>
 
 						<div className="doc-faq-list">
 							<details>
 								<summary>What is Amrutam?</summary>
-								<p className="small">
-									A holistic Ayurvedic platform.
-								</p>
+								<p className="small">A holistic Ayurvedic platform.</p>
 							</details>
 							<details>
 								<summary>How does Amrutam help?</summary>
-								<p className="small">
-									More patients, flexible modes.
-								</p>
+								<p className="small">More patients, flexible modes.</p>
 							</details>
 							<details>
 								<summary>How to join?</summary>
-								<p className="small">
-									Referral → Register → KYC.
-								</p>
+								<p className="small">Referral → Register → KYC.</p>
 							</details>
 							<details>
 								<summary>Is there a fee?</summary>
-								<p className="small">
-									Discuss with onboarding team.
-								</p>
+								<p className="small">Discuss with onboarding team.</p>
 							</details>
 
-							<button className="btn btn-outline small-btn">
-								See More
-							</button>
+							<button className="btn btn-outline small-btn">See More</button>
 						</div>
 					</div>
 				</section>
@@ -659,31 +595,20 @@ const DoctorHome = () => {
 					<div className="container two-column">
 						<div>
 							<h2>Let’s Connect</h2>
-							<p className="page-subtitle">
-								Reach out for any questions.
-							</p>
+							<p className="page-subtitle">Reach out for any questions.</p>
 
 							<form className="form">
 								<label>
 									Your Name
-									<input
-										type="text"
-										defaultValue="Your Name"
-									/>
+									<input type="text" defaultValue="Your Name" />
 								</label>
 								<label>
 									Your Contact Number
-									<input
-										type="text"
-										defaultValue="99XXXXXXX0"
-									/>
+									<input type="text" defaultValue="99XXXXXXX0" />
 								</label>
 								<label>
 									Your Email
-									<input
-										type="email"
-										defaultValue="xyz@gmail.com"
-									/>
+									<input type="email" defaultValue="xyz@gmail.com" />
 								</label>
 								<label>
 									Message

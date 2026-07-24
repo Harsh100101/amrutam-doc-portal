@@ -6,9 +6,9 @@
 }
 
 .chip-route {
-	border: 1px solid #0f766e;
-	color: #0f766e;
-	background: #fff;
+	border: 1px solid var(--border-strong);
+	color: var(--text-muted);
+	background: var(--surface);
 	padding: 8px 18px;
 	border-radius: 20px;
 	cursor: pointer;
@@ -17,6 +17,6 @@
 }
 
 .chip-route:hover {
-	background: #0f766e;
-	color: #fff;
+	background: var(--surface-soft);
+	color: var(--text);
 }

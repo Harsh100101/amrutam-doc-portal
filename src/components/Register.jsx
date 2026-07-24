@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 
-export default function Register({ switchToLogin, onClose }) {
+export default function Register({ onSwitchToLogin, onClose }) {
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -23,10 +22,12 @@ export default function Register({ switchToLogin, onClose }) {
 	return (
 		<div className="modal-content">
 			<h2 className="modal-title">Doctor Registration</h2>
+			<p className="modal-sub">Create your account and start onboarding.</p>
 
 			<form onSubmit={handleRegister}>
-				<label>Full Name</label>
+				<label htmlFor="register-name">Full Name</label>
 				<input
+					id="register-name"
 					type="text"
 					name="name"
 					value={formData.name}
@@ -35,8 +36,9 @@ export default function Register({ switchToLogin, onClose }) {
 					placeholder="Enter your name"
 				/>
 
-				<label>Email</label>
+				<label htmlFor="register-email">Email</label>
 				<input
+					id="register-email"
 					type="email"
 					name="email"
 					value={formData.email}
@@ -45,8 +47,9 @@ export default function Register({ switchToLogin, onClose }) {
 					placeholder="Enter your email"
 				/>
 
-				<label>Password</label>
+				<label htmlFor="register-password">Password</label>
 				<input
+					id="register-password"
 					type="password"
 					name="password"
 					value={formData.password}
@@ -55,8 +58,9 @@ export default function Register({ switchToLogin, onClose }) {
 					placeholder="Create password"
 				/>
 
-				<label>Specialization</label>
+				<label htmlFor="register-specialization">Specialization</label>
 				<input
+					id="register-specialization"
 					type="text"
 					name="specialization"
 					value={formData.specialization}
@@ -64,8 +68,9 @@ export default function Register({ switchToLogin, onClose }) {
 					placeholder="Ayurveda / Panchakarma etc."
 				/>
 
-				<label>Experience (Years)</label>
+				<label htmlFor="register-experience">Experience (Years)</label>
 				<input
+					id="register-experience"
 					type="number"
 					name="experience"
 					value={formData.experience}
@@ -80,7 +85,7 @@ export default function Register({ switchToLogin, onClose }) {
 
 			<p className="modal-footer-text">
 				Already have an account?{" "}
-				<button className="modal-link" onClick={switchToLogin}>
+				<button type="button" className="modal-link" onClick={onSwitchToLogin}>
 					Login
 				</button>
 			</p>

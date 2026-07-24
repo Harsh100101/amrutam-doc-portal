@@ -2,18 +2,19 @@
 
 .de-wrapper {
 	margin: 0 auto;
-	padding: 32px 120px;
-	background: #fff7e2;
+	width: min(var(--container), calc(100% - 32px));
+	padding: 28px 0 0;
+	background: transparent;
 }
 
 .de-header h1 {
 	font-size: 26px;
 	font-weight: 700;
-	color: #1a3c34;
+	color: var(--text);
 }
 
 .de-header p {
-	color: #4b5563;
+	color: var(--text-muted);
 	margin-top: 4px;
 }
 
@@ -26,22 +27,23 @@
 }
 
 .de-card {
-	background: #ffeec3;
-	border-radius: 18px;
+	background: var(--surface);
+	border-radius: 20px;
 	padding: 18px 20px;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+	box-shadow: var(--shadow-sm);
+	border: 1px solid var(--border);
 }
 
 .de-label {
 	font-size: 14px;
-	color: #6b7280;
+	color: var(--text-muted);
 }
 
 .de-value {
 	margin-top: 6px;
 	font-size: 22px;
 	font-weight: 700;
-	color: #111827;
+	color: var(--text);
 }
 
 /* Panels */
@@ -53,16 +55,17 @@
 }
 
 .de-panel {
-	background: #ffeec3;
-	border-radius: 18px;
+	background: var(--surface);
+	border-radius: 20px;
 	padding: 22px 20px;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+	box-shadow: var(--shadow-sm);
+	border: 1px solid var(--border);
 }
 
 .de-panel h2 {
 	font-size: 20px;
 	margin-bottom: 14px;
-	color: #111827;
+	color: var(--text);
 }
 
 /* Monthly earnings list */
@@ -76,7 +79,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 10px 0;
-	border-bottom: 1px solid #e5e7eb;
+	border-bottom: 1px solid var(--border);
 }
 
 .de-list li:last-child {
@@ -84,17 +87,17 @@
 }
 
 .de-list span {
-	color: #6b7280;
+	color: var(--text-muted);
 }
 
 .de-list strong {
-	color: #111827;
+	color: var(--text);
 }
 
 /* Payout section */
 .de-text {
 	font-size: 14px;
-	color: #4b5563;
+	color: var(--text-muted);
 	margin-bottom: 16px;
 }
 
@@ -110,10 +113,10 @@
 .de-table td {
 	padding: 8px 6px;
 	text-align: left;
-	border-bottom: 1px solid #e5e7eb;
+	border-bottom: 1px solid var(--border);
 }
 
 .de-table th {
 	font-weight: 600;
-	color: #374151;
+	color: var(--text);
 }

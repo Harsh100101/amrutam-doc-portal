@@ -1,1 +1,5 @@
 /* App-level styles live in index.css and page/component CSS files. */
+#root {
+	width: 100%;
+	min-height: 100vh;
+}

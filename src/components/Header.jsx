@@ -21,6 +21,10 @@ const portalLinks = [
 export default function Header({ openLogin }) {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const closeMenu = () => setMenuOpen(false);
+	const handleLogin = () => {
+		closeMenu();
+		openLogin();
+	};
 
 	return (
 		<header className="nav-header">
@@ -64,12 +68,12 @@ export default function Header({ openLogin }) {
 						))}
 					</div>
 
-					<button className="login-btn mobile" onClick={openLogin}>
+					<button className="login-btn mobile" onClick={handleLogin}>
 						Login
 					</button>
 				</nav>
 
-				<button className="login-btn desktop" onClick={openLogin}>
+				<button className="login-btn desktop" onClick={handleLogin}>
 					Login
 				</button>
 			</div>

@@ -6,7 +6,7 @@ A modern, responsive, and product-focused Doctor Onboarding & Practice Managemen
 
 ## Live Demo
 
-**Live Preview:** *https://harsh100101.github.io/amrutam-doc-portal/*
+**Live Preview:** *https://amrutam-doc-portal.vercel.app/*
 
 ---
 

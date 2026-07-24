@@ -1,4 +1,5 @@
 import SEO from "../components/SEO";
+import { publicAsset } from "../utils/assets";
 import "./DoctorOnboarding.css";
 
 export default function DoctorOnboarding() {
@@ -23,7 +24,7 @@ export default function DoctorOnboarding() {
 						<article className="onboarding__step">
 							<div className="onboarding__step-icon">
 								<img
-									src="./assets/onboarding/1.png"
+									src={publicAsset("assets/onboarding/1.png")}
 									alt="step 1"
 								/>
 							</div>
@@ -39,7 +40,7 @@ export default function DoctorOnboarding() {
 						<article className="onboarding__step">
 							<div className="onboarding__step-icon">
 								<img
-									src="./assets/onboarding/2.png"
+									src={publicAsset("assets/onboarding/2.png")}
 									alt="step 2"
 								/>
 							</div>
@@ -56,7 +57,7 @@ export default function DoctorOnboarding() {
 						<article className="onboarding__step">
 							<div className="onboarding__step-icon">
 								<img
-									src="./assets/onboarding/3.png"
+									src={publicAsset("assets/onboarding/3.png")}
 									alt="step 3"
 								/>
 							</div>
@@ -73,7 +74,7 @@ export default function DoctorOnboarding() {
 						<article className="onboarding__step">
 							<div className="onboarding__step-icon">
 								<img
-									src="./assets/onboarding/4.png"
+									src={publicAsset("assets/onboarding/4.png")}
 									alt="step 4"
 								/>
 							</div>
@@ -90,7 +91,7 @@ export default function DoctorOnboarding() {
 
 					<div className="onboarding__banner">
 						<img
-							src="./assets/onboarding/onboarding.png"
+							src={publicAsset("assets/onboarding/onboarding.png")}
 							alt="Onboarding Illustration"
 						/>
 					</div>

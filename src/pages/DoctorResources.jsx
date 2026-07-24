@@ -1,4 +1,5 @@
 import SEO from "../components/SEO";
+import { publicAsset } from "../utils/assets";
 import "./DoctorResources.css";
 
 export default function DoctorResources() {
@@ -39,7 +40,7 @@ export default function DoctorResources() {
 							<article key={index} className="resources__card">
 								<div className="resources__thumbnail">
 									<img
-										src="./assets/respage/article.png"
+										src={publicAsset("assets/respage/article.png")}
 										alt={r.title}
 									/>
 								</div>

@@ -1,4 +1,5 @@
 import SEO from "../components/SEO";
+import { publicAsset } from "../utils/assets";
 import "./DoctorFAQ.css";
 
 export default function DoctorFAQ() {
@@ -44,7 +45,10 @@ export default function DoctorFAQ() {
 						{faqs.map((item, index) => (
 							<article key={index} className="faq-page__item">
 								<div className="faq-page__icon">
-									<img src="./assets/faq/faq.png" alt="faq" />
+									<img
+										src={publicAsset("assets/faq/faq.png")}
+										alt="faq"
+									/>
 								</div>
 								<div className="faq-page__content">
 									<h2>{item.q}</h2>

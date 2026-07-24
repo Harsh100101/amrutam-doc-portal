@@ -2,6 +2,7 @@ import "./DoctorHome.css";
 import { useRef, useState, useEffect } from "react";
 import SEO from "../components/SEO.jsx";
 import BackToTop from "../components/BackToTop";
+import { publicAsset } from "../utils/assets";
 
 const DoctorHome = () => {
 	// Scroll references
@@ -123,7 +124,7 @@ const DoctorHome = () => {
 							<div className="doc-hero-right">
 								<div className="doc-hero-image-wrapper">
 									<img
-										src="./assets/doctorhome/doctor.png"
+										src={publicAsset("assets/doctorhome/doctor.png")}
 										alt="Amrutam Doctors Illustration"
 										className="doc-hero-image"
 									/>
@@ -138,39 +139,39 @@ const DoctorHome = () => {
 
 							<div className="doc-featured-logos">
 								<img
-									src="./assets/doctorhome/logo1.png"
+									src={publicAsset("assets/doctorhome/logo1.png")}
 									alt="Publication Logo 1"
 								/>
 								<img
-									src="./assets/doctorhome/logo2.png"
+									src={publicAsset("assets/doctorhome/logo2.png")}
 									alt="Publication Logo 2"
 								/>
 								<img
-									src="./assets/doctorhome/logo3.png"
+									src={publicAsset("assets/doctorhome/logo3.png")}
 									alt="Publication Logo 3"
 								/>
 								<img
-									src="./assets/doctorhome/logo4.png"
+									src={publicAsset("assets/doctorhome/logo4.png")}
 									alt="Publication Logo 4"
 								/>
 								<img
-									src="./assets/doctorhome/logo5.png"
+									src={publicAsset("assets/doctorhome/logo5.png")}
 									alt="Publication Logo 5"
 								/>
 								<img
-									src="./assets/doctorhome/logo6.png"
+									src={publicAsset("assets/doctorhome/logo6.png")}
 									alt="Publication Logo 6"
 								/>
 								<img
-									src="./assets/doctorhome/logo7.png"
+									src={publicAsset("assets/doctorhome/logo7.png")}
 									alt="Publication Logo 7"
 								/>
 								<img
-									src="./assets/doctorhome/logo8.png"
+									src={publicAsset("assets/doctorhome/logo8.png")}
 									alt="Publication Logo 8"
 								/>
 								<img
-									src="./assets/doctorhome/logo9.png"
+									src={publicAsset("assets/doctorhome/logo9.png")}
 									alt="Publication Logo 9"
 								/>
 							</div>
@@ -184,7 +185,7 @@ const DoctorHome = () => {
 						<div className="stat-card">
 							{/* optional icon for stat */}
 							<img
-								src="./assets/doctorhome/user.png"
+								src={publicAsset("assets/doctorhome/user.png")}
 								alt=""
 								className="stat-card-icon"
 							/>
@@ -193,7 +194,7 @@ const DoctorHome = () => {
 						</div>
 						<div className="stat-card">
 							<img
-								src="./assets/doctorhome/call.png"
+								src={publicAsset("assets/doctorhome/call.png")}
 								alt=""
 								className="stat-card-icon"
 							/>
@@ -215,7 +216,7 @@ const DoctorHome = () => {
 						<div className="grid-3 doc-why-grid">
 							<article className="card">
 								<img
-									src="./assets/doctorhome/5min.png"
+									src={publicAsset("assets/doctorhome/5min.png")}
 									alt=""
 									className="card-icon"
 								/>
@@ -225,7 +226,7 @@ const DoctorHome = () => {
 
 							<article className="card">
 								<img
-									src="./assets/doctorhome/forum.png"
+									src={publicAsset("assets/doctorhome/forum.png")}
 									alt=""
 									className="card-icon"
 								/>
@@ -238,7 +239,7 @@ const DoctorHome = () => {
 
 							<article className="card">
 								<img
-									src="./assets/doctorhome/wallet.png"
+									src={publicAsset("assets/doctorhome/wallet.png")}
 									alt=""
 									className="card-icon"
 								/>
@@ -261,7 +262,7 @@ const DoctorHome = () => {
 							{/* doctor avatar */}
 							<div className="doc-avatar-wrap">
 								<img
-									src="./assets/doctorhome/prema.png"
+									src={publicAsset("assets/doctorhome/prema.png")}
 									alt="Dr. Prerna Narang"
 									className="doc-avatar"
 								/>
@@ -279,7 +280,7 @@ const DoctorHome = () => {
 
 						<div className="card">
 							<img
-								src="./assets/doctorhome/connect.png"
+								src={publicAsset("assets/doctorhome/connect.png")}
 								alt=""
 								className="card-illustration"
 							/>
@@ -374,7 +375,7 @@ const DoctorHome = () => {
 
 						<div className="card">
 							<img
-								src="./assets/doctorhome/comments.png"
+								src={publicAsset("assets/doctorhome/comments.png")}
 								alt="Comments Illustration"
 								className="card-illustration"
 							/>
@@ -421,7 +422,7 @@ const DoctorHome = () => {
 						<div className="card">
 							<h3>Today</h3>
 							<img
-								src="./assets/doctorhome/dashboard.png"
+								src={publicAsset("assets/doctorhome/dashboard.png")}
 								alt="Dashboard Illustration"
 								className="card-illustration"
 							/>
@@ -447,7 +448,7 @@ const DoctorHome = () => {
 
 						<div className="card">
 							<img
-								src="./assets/doctorhome/prema.png"
+								src={publicAsset("assets/doctorhome/prema.png")}
 								alt="Doctor Profile"
 								className="doc-avatar"
 							/>
@@ -511,7 +512,7 @@ const DoctorHome = () => {
 
 						<div className="doc-steps-right">
 							<img
-								src="./assets/doctorhome/join-our-circle.png"
+								src={publicAsset("assets/doctorhome/join-our-circle.png")}
 								alt="Onboarding Steps Illustration"
 								className="steps-image"
 							/>
@@ -532,7 +533,7 @@ const DoctorHome = () => {
 						<div className="grid-3 doc-why-grid">
 							<article className="card">
 								<img
-									src="./assets/doctorhome/rajesh.png"
+									src={publicAsset("assets/doctorhome/rajesh.png")}
 									alt=""
 									className="card-icon"
 								/>
@@ -541,7 +542,7 @@ const DoctorHome = () => {
 							</article>
 							<article className="card">
 								<img
-									src="./assets/doctorhome/ananya.png"
+									src={publicAsset("assets/doctorhome/ananya.png")}
 									alt=""
 									className="card-icon"
 								/>
@@ -550,7 +551,7 @@ const DoctorHome = () => {
 							</article>
 							<article className="card">
 								<img
-									src="./assets/doctorhome/pooja.png"
+									src={publicAsset("assets/doctorhome/pooja.png")}
 									alt=""
 									className="card-icon"
 								/>

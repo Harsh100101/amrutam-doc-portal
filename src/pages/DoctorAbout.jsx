@@ -1,4 +1,5 @@
 import SEO from "../components/SEO";
+import { publicAsset } from "../utils/assets";
 import "./DoctorAbout.css";
 
 export default function DoctorAbout() {
@@ -23,7 +24,7 @@ export default function DoctorAbout() {
 						</div>
 						<div className="about__image-wrapper">
 							<img
-								src="./assets/about/about.png"
+								src={publicAsset("assets/about/about.png")}
 								alt="About Amrutam"
 								className="about__image"
 							/>
@@ -33,7 +34,7 @@ export default function DoctorAbout() {
 					<section className="about__grid">
 						<article className="about__card">
 							<img
-								src="./assets/about/mission.png"
+								src={publicAsset("assets/about/mission.png")}
 								alt="out mission"
 								className="about__card-icon"
 							/>
@@ -48,7 +49,7 @@ export default function DoctorAbout() {
 
 						<article className="about__card">
 							<img
-								src="./assets/about/values.png"
+								src={publicAsset("assets/about/values.png")}
 								alt="our values"
 								className="about__card-icon"
 							/>
@@ -62,7 +63,7 @@ export default function DoctorAbout() {
 
 						<article className="about__card">
 							<img
-								src="./assets/about/choose.png"
+								src={publicAsset("assets/about/choose.png")}
 								alt="choose me"
 								className="about__card-icon"
 							/>
